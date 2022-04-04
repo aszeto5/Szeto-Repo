@@ -5,17 +5,17 @@
 }
 
 :root {
-
+    --primary-color: rgb(49, 77, 95);
+    --secondary-color: rgb(34, 34, 41);
 }
 
 body {
-
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Header Styles */
 header {
     padding: 20px 35px;
-    background-color: rgb(10, 79, 143);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -63,28 +63,275 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    background: navy;
-    color: white;
+    background: var(--primary-color);
+    color: aliceblue;
     border-radius: 15px;
     text-shadow: none;
 }
 
 /* Hero Style */
 .hero {
-    background-image: url(../water-background.jpg);
+    background-image: url(../starry-space.jpg);
     background-size: cover;
     background-position: center;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: flex-start;
+    padding-bottom: 35px;
+}
+
+.welcome {
+    color: aliceblue;
+    text-align: center;
+    padding: 35px 0 35px 0;
+    border-bottom: 3px solid var(--primary-color);
+    margin: auto;
+    width: 50%;
+    font-size: 250%;
 }
 
 .profile-pic {
-    color: white;
-    margin-bottom: 250px;
+    color: aliceblue;
+    margin: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .profile-pic img {
-    width: 40%;
+    width: 400px;
+    height: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    border-radius: 20px;
+}
+
+.about-me {
+    text-align: left;
+    font-size: 15px;
+    background-color: var(--primary-color);
+    color: aliceblue;
+    padding: 20px;
+    width: 400px;
+    height: 400px;
+    line-height: 1.5;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+.yours-truly {
+    margin-left: 60%;
+}
+
+.section-title-intro {
+    font-style: italic;
+}
+
+/* Work Section */
+
+.section-title-secondary {
+    color: aliceblue;
+}
+
+.history {
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+}
+
+.history h2 {
+    border-right: 3px solid var(--secondary-color);
+    height: 70%;
+    margin: 30px;
+    padding-right: 10px;
+}
+
+.work-content img {
+    width: 350px;
+    height: 350px;
+}
+
+.work-content a {
+    text-decoration: none;
+}
+
+.work-content {
+    margin: 30px auto 30px auto;  
+}
+
+.content-1 {
+    background-image: url(../hero-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 350px;
+    height: 200px;
+    border: 3.5px solid var(--secondary-color);
+    border-radius: 15px;
+    font-size: 40px;
+}
+
+.content-1:hover {
+    background-image: url(../hero-bg.jpg);
+    color: aliceblue;
+    border-radius: 15px;
+    opacity: 0.7;
+}
+
+.run-buddy {
+    color: var(--secondary-color);
+    text-align: right;
+    padding: 110px 15px 0px 0px;
+}
+
+.work-content p { 
+    font-size: 20px;
+    color: var(--secondary-color);
+    text-align: right;
+    padding-right: 20px;
+}
+
+/* Contact Me */
+
+footer {
+    background-color: var(--secondary-color);
+    background-size: cover;
+    background-position: center;
+    color: aliceblue;
+    text-align: center;
+    width: 100%;
+    padding: 20px 100px;
+}
+
+footer h2 {
+    border-bottom: 3px solid var(--primary-color);
+    width: 50%;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+footer ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 25px;
+}
+
+footer a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+footer a:hover {
+    background-color: var(--primary-color);
+    border-radius: 15px;
+    padding: 10px 15px;
+}
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+    header {
+        padding-bottom: 0;
+        justify-content: center;
+        position: relative;
+    }
+    
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    header nav ul li a {
+        font-size: 20px;
+    }
+    
+    footer h2, footer div {
+        text-align: center;
+        width: 100%;
+    }
+
+    .hero-cta, .hero-form {
+        width: 100%;
+    }
+
+    .hero-cta {
+        text-align: center;
+    }
+
+    .section-title {
+        width: 80%;
+    }    
+
+    .trainer {
+        flex: 0 70%;
+    }
+
+    .contact-info iframe {
+        flex: 1 100%;
+    }
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width:768) {
+    section {
+        padding: 30px 15px;
+    }
+
+    .step h3 {
+        flex: 1 100%;
+        text-align: center;
+    }
+
+    .step-info {
+        flex: 2 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .step-img {
+        flex: 0 32%;
+        margin-right: 0;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .step-text {
+        flex: 100%;
+    }
+
+}
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+
+    .hero-form button {
+        width: 100%;
+    }
+
+    .section-title {
+        width: 95%;
+    }
+
+    .intro p {
+        width: 100%;
+    }
+
+    .trainer {
+        flex: 0 100%;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .contact-info > * {
+        flex: 0 100%;
+    }
+
+    .contact-form {
+        order: 3;
+    }
 }
